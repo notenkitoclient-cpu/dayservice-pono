@@ -898,63 +898,35 @@ a {
   color: var(--color-text);
 }
 
-.instagram-placeholder {
+.instagram-simple {
   text-align: center;
+  margin-top: 32px;
 }
 
-.instagram-icon {
+.instagram-btn {
   display: inline-flex;
-  width: 100px;
-  height: 100px;
-  background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-  border-radius: 24px;
   align-items: center;
-  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
   color: white;
-  margin: 0 auto 20px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 18px 48px;
+  border-radius: var(--radius-btn);
   box-shadow: 0 8px 24px rgba(220, 39, 67, 0.3);
+  transition: var(--transition);
+  margin-bottom: 24px;
 }
-
-.instagram-coming {
-  font-size: 1.3rem;
-  font-weight: 900;
-  color: var(--color-text);
-  margin-bottom: 8px;
+.instagram-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(220, 39, 67, 0.4);
+  color: white; /* 念のため文字色を白で固定 */
 }
 
 .instagram-sub {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  font-weight: 500;
   color: var(--color-text-light);
-  margin-bottom: 32px;
-}
-
-.instagram-mock-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  max-width: 480px;
-  margin: 0 auto;
-}
-
-.mock-photo {
-  aspect-ratio: 1;
-  border-radius: 12px;
-  background: linear-gradient(135deg,
-    rgba(246, 188, 194, 0.4),
-    rgba(171, 220, 236, 0.4),
-    rgba(244, 222, 148, 0.4)
-  );
-  animation: shimmer 2.5s ease-in-out infinite alternate;
-}
-.mock-photo:nth-child(2) { animation-delay: 0.3s; }
-.mock-photo:nth-child(3) { animation-delay: 0.6s; }
-.mock-photo:nth-child(4) { animation-delay: 0.9s; }
-.mock-photo:nth-child(5) { animation-delay: 1.2s; }
-.mock-photo:nth-child(6) { animation-delay: 1.5s; }
-
-@keyframes shimmer {
-  from { opacity: 0.5; }
-  to   { opacity: 1; }
 }
 
 /* ========================================
