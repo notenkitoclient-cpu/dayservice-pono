@@ -129,7 +129,11 @@ a {
   line-height: 1.8;
 }
 
-.accent-pink { color: var(--color-pink-dark); }
+.accent-pink { 
+  color: var(--color-pink-dark);
+  background: linear-gradient(transparent 65%, rgba(246, 188, 194, 0.5) 65%);
+  padding: 0 0.2em;
+}
 
 /* ========================================
    HEADER
@@ -215,10 +219,11 @@ a {
   inset: 0;
   background: linear-gradient(
     120deg,
-    rgba(249, 239, 235, 0.95) 0%,
-    rgba(246, 188, 194, 0.40) 50%,
-    rgba(171, 220, 236, 0.25) 100%
+    rgba(249, 239, 235, 0.98) 0%,
+    rgba(249, 239, 235, 0.85) 50%,
+    rgba(171, 220, 236, 0.50) 100%
   );
+  z-index: 2;
 }
 
 .hero-content {
