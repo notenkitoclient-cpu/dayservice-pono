@@ -515,12 +515,12 @@ a {
    MACHINES
 ======================================== */
 .machines {
-  background: var(--color-base);
-  padding: 120px 0 80px;
+  background: linear-gradient(180deg, var(--color-bg-soft) 0%, var(--color-base) 100%);
+  padding: 80px 0;
 }
 
 .machines-bg {
-  background: linear-gradient(180deg, var(--color-bg-soft) 0%, var(--color-base) 100%);
+  width: 100%;
 }
 
 .machines-grid {
