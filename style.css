@@ -515,12 +515,13 @@ a {
    MACHINES
 ======================================== */
 .machines {
-  background: var(--color-base);
-  padding: 120px 0 80px;
+  background: linear-gradient(180deg, var(--color-bg-soft) 0%, var(--color-base) 100%);
+  padding: 80px 0; /* 他の.sectionと同じに */
 }
 
 .machines-bg {
-  background: linear-gradient(180deg, var(--color-bg-soft) 0%, var(--color-base) 100%);
+  /* 背景を親に移動したため、ここは不要なpaddingを無効化 */
+  width: 100%;
 }
 
 .machines-grid {
