@@ -130,9 +130,10 @@ a {
 }
 
 .accent-pink { 
-  color: var(--color-pink-dark);
-  background: linear-gradient(transparent 65%, rgba(246, 188, 194, 0.5) 65%);
-  padding: 0 0.2em;
+  color: #d44e7b; /* より濃く鮮やかなピンク */
+  background: linear-gradient(transparent 60%, rgba(212, 78, 123, 0.25) 60%);
+  padding: 0 0.1em;
+  font-weight: 800;
 }
 
 /* ========================================
@@ -219,9 +220,9 @@ a {
   inset: 0;
   background: linear-gradient(
     120deg,
-    rgba(249, 239, 235, 0.98) 0%,
-    rgba(249, 239, 235, 0.85) 50%,
-    rgba(171, 220, 236, 0.50) 100%
+    rgba(249, 239, 235, 1.0) 0%, /* 左側を完全に塗りつぶして可読性アップ */
+    rgba(249, 239, 235, 0.88) 50%,
+    rgba(171, 220, 236, 0.55) 100%
   );
   z-index: 2;
 }
