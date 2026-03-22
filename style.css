@@ -516,6 +516,7 @@ a {
 ======================================== */
 .machines {
   background: var(--color-base);
+  padding: 120px 0 80px;
 }
 
 .machines-bg {
