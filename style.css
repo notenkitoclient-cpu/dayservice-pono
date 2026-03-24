@@ -292,8 +292,8 @@ a {
 .hero-trial-text {
   font-size: 1.15rem;
   font-weight: 700;
-  color: var(--color-pink-dark);
-  margin-bottom: 48px;
+  color: var(--color-text);
+  margin-bottom: 24px;
   background: rgba(255, 255, 255, 0.6);
   display: inline-block;
   padding: 6px 16px;
