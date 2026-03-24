@@ -1176,15 +1176,15 @@ a {
   }
   .recommend-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 12px;
+    gap: 24px;
   }
   .recommend-item {
-    padding: 24px 12px;
+    padding: 24px 8px;
   }
   .recommend-icon {
     width: 110px;
     height: 110px;
-    margin-bottom: 12px;
+    margin: 0 auto 12px;
   }
   .recommend-item p {
     font-size: 0.85rem;
