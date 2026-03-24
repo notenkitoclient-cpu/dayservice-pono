@@ -1086,6 +1086,17 @@ a {
 }
 
 /* ========================================
+   UTILITIES
+======================================== */
+.sp-br { display: none; }
+.pc-br { display: block; }
+
+@media (max-width: 600px) {
+  .sp-br { display: block; }
+  .pc-br { display: none; }
+}
+
+/* ========================================
    RESPONSIVE
 ======================================== */
 @media (max-width: 900px) {
