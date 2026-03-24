@@ -1175,13 +1175,14 @@ a {
     font-size: 1.8rem;
   }
   .recommend-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 24px;
-    margin: 0 auto;
-    width: 92%;
-    max-width: 310px;
   }
   .recommend-item {
+    width: 100%;
+    max-width: 310px;
     padding: 32px 24px;
   }
   .recommend-icon {
