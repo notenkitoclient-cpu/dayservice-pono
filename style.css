@@ -1177,8 +1177,9 @@ a {
   .recommend-grid {
     grid-template-columns: 1fr;
     gap: 24px;
-    max-width: 340px;
     margin: 0 auto;
+    width: 100%;
+    max-width: 340px;
   }
   .recommend-item {
     padding: 32px 24px;
@@ -1203,17 +1204,22 @@ a {
   }
   .feature-number {
     font-size: 2.8rem;
-    top: 16px;
-    right: 16px;
-    opacity: 0.5; /* 被っても目立ちにくくする（念のため） */
+    top: 10px;
+    right: 12px;
+    opacity: 0.3; /* もっと薄くして背面に徹するように調整 */
+    z-index: 1;
   }
   .rehab-feature-card h3 {
-    padding-right: 48px; /* 数字エリアに文字が進入するのをブロック */
+    padding-right: 80px; /* 文字が03などの数字と重ならないよう、さらに右側の回避エリアを大きく確保 */
     font-size: 1.05rem;
+    position: relative;
+    z-index: 2;
   }
   .rehab-feature-card p {
-    padding-right: 48px;
+    padding-right: 20px;
     font-size: 0.9rem;
+    position: relative;
+    z-index: 2;
   }
   .instagram-mock-grid {
     max-width: 320px;
