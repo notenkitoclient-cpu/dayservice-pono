@@ -1211,7 +1211,7 @@ a {
     z-index: 1;
   }
   .rehab-feature-card h3 {
-    padding-right: 80px; /* 文字が03などの数字と重ならないよう、さらに右側の回避エリアを大きく確保 */
+    padding-right: 48px; /* 1行表示に合わせて余白を再調整 */
     font-size: 1.05rem;
     position: relative;
     z-index: 2;
