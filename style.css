@@ -723,6 +723,119 @@ a {
   background: var(--color-bg-soft);
 }
 
+/* ===== 新: 中央コンテンツ + 左右時刻レイアウト ===== */
+.schedule-dual-header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.schedule-dual-badge {
+  padding: 12px 20px;
+  border-radius: var(--radius-card);
+  font-weight: 900;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.5;
+}
+.schedule-dual-badge span {
+  font-size: 0.82rem;
+  font-weight: 500;
+  display: block;
+}
+.schedule-dual-badge.badge-blue { background: var(--color-blue); color: #2a5a6a; }
+.schedule-dual-badge.badge-pink { background: var(--color-pink); color: #8a3a44; }
+
+.schedule-dual-center-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-text-light);
+  text-align: center;
+  padding: 0 8px;
+}
+
+.schedule-dual {
+  background: white;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.schedule-dual-row {
+  display: grid;
+  grid-template-columns: 90px 1fr 90px;
+  align-items: center;
+  padding: 18px 24px;
+  border-bottom: 1px solid rgba(90,74,66,0.06);
+  transition: background 0.2s ease;
+}
+.schedule-dual-row:last-child { border-bottom: none; }
+.schedule-dual-row:hover { background: rgba(249,239,235,0.5); }
+
+.schedule-dual-row-main {
+  background: linear-gradient(135deg, rgba(171,220,236,0.12), rgba(246,188,194,0.12));
+}
+.schedule-dual-row-main:hover {
+  background: linear-gradient(135deg, rgba(171,220,236,0.2), rgba(246,188,194,0.2));
+}
+
+.schedule-dual-row-end {
+  background: rgba(244,222,148,0.12);
+}
+
+.dual-time {
+  font-size: 1rem;
+  font-weight: 900;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+.am-time {
+  color: var(--color-blue-dark);
+  text-align: right;
+}
+.pm-time {
+  color: var(--color-pink-dark);
+  text-align: left;
+}
+
+.dual-content {
+  text-align: center;
+  padding: 0 16px;
+}
+.dual-content strong {
+  display: block;
+  font-size: 0.97rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 4px;
+  line-height: 1.5;
+}
+.dual-content p {
+  font-size: 0.82rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* スマホ対応 */
+@media (max-width: 600px) {
+  .schedule-dual-row {
+    grid-template-columns: 60px 1fr 60px;
+    padding: 14px 12px;
+  }
+  .dual-time { font-size: 0.82rem; }
+  .dual-content strong { font-size: 0.9rem; }
+  .dual-content p { font-size: 0.78rem; }
+  .schedule-dual-header {
+    grid-template-columns: 1fr auto 1fr;
+  }
+  .schedule-dual-badge { font-size: 0.85rem; padding: 10px 12px; }
+}
+
+
 .schedule-tabs {
   display: grid;
   grid-template-columns: 1fr 1fr;
