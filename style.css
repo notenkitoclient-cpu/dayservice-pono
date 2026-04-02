@@ -1288,10 +1288,25 @@ a {
 ======================================== */
 .sp-br { display: none; }
 .pc-br { display: block; }
+.pc-dot { display: inline; } /* PCでは「・」を表示 */
 
 @media (max-width: 600px) {
   .sp-br { display: block; }
   .pc-br { display: none; }
+  .pc-dot { display: none; } /* スマホでは「・」を非表示（改行で代替） */
+
+  /* マシン紹介: スマホは1列 */
+  .machines-text-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .machines-photos {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .machine-photo-wrap {
+    height: 220px;
+  }
 }
 
 /* ========================================
