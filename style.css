@@ -1301,9 +1301,13 @@ a {
     gap: 16px;
   }
   .machines-photos {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 16px;
   }
+  .machines-photos .machine-photo-wrap:nth-child(2) { order: 1; }
+  .machines-photos .machine-photo-wrap:nth-child(3) { order: 2; }
+  .machines-photos .machine-photo-wrap:nth-child(1) { order: 3; }
   .machine-photo-wrap {
     height: 220px;
   }
