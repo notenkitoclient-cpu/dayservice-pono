@@ -1288,11 +1288,13 @@ a {
    UTILITIES
 ======================================== */
 .sp-br { display: none; }
+.sp-only { display: none; }
 .pc-br { display: block; }
 .pc-dot { display: inline; } /* PCでは「・」を表示 */
 
 @media (max-width: 600px) {
   .sp-br { display: block; }
+  .sp-only { display: block; }
   .pc-br { display: none; }
   .pc-dot { display: none; } /* スマホでは「・」を非表示（改行で代替） */
 
