@@ -823,10 +823,11 @@ a {
 /* スマホ対応 */
 @media (max-width: 600px) {
   .schedule-dual-row {
-    grid-template-columns: 60px 1fr 60px;
-    padding: 14px 12px;
+    grid-template-columns: 52px 1fr 52px;
+    padding: 14px 8px;
   }
-  .dual-time { font-size: 0.82rem; }
+  .dual-time { font-size: 0.78rem; }
+  .dual-content { padding: 0 8px; }
   .dual-content strong { font-size: 0.9rem; }
   .dual-content p { font-size: 0.78rem; }
   .schedule-dual-header {
