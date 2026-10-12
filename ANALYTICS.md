@@ -11,3 +11,5 @@
 - 解析を使うページやイベントを増やす場合は、本方針と送信内容を見直す。
 
 確認：JavaScript構文検査、HTMLの解析スクリプト1本・canonical、サイトマップXML、git差分検査が成功。テストスイート・実フォーム送信・GA4確認イベントは未実行。
+
+Cloudflare PagesのHTML拡張子省略への転送に合わせ、公開リンク/canonical/サイトマップは /privacy、保存ファイルは privacy.html。公式資料：https://developers.cloudflare.com/pages/configuration/serving-pages/

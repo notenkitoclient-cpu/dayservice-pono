@@ -96,7 +96,7 @@
     suspend();
     const controls = document.createElement('div');
     controls.className = 'analytics-settings';
-    controls.innerHTML = '<button type="button">アクセス解析の設定</button> · <a href="/privacy.html">アクセス解析について</a>';
+    controls.innerHTML = '<button type="button">アクセス解析の設定</button> · <a href="/privacy">アクセス解析について</a>';
     controls.querySelector('button').addEventListener('click', show);
     const footer = document.querySelector('footer');
     (footer || document.body).appendChild(controls);
@@ -104,14 +104,14 @@
     banner.className = 'analytics-consent';
     banner.setAttribute('aria-label', 'アクセス解析の設定');
     banner.hidden = choice() !== null;
-    banner.innerHTML = '<h2>アクセス解析について</h2><p>サイト改善のため、同意いただいた場合にGoogleアナリティクスで公開ページの閲覧と連絡ボタンの操作を計測します。氏名・連絡先・フォームやLINEの本文は解析に送信しません。広告用途には使いません。選択は90日保存し、フッターから変更できます。</p><p><a href="/privacy.html">詳しく見る</a> · <a href="https://policies.google.com/privacy?hl=ja" target="_blank" rel="noopener noreferrer">Googleのプライバシーポリシー</a></p><div><button type="button" data-choice="deny">許可しない</button><button type="button" data-choice="allow">許可する</button></div>';
+    banner.innerHTML = '<h2>アクセス解析について</h2><p>サイト改善のため、同意いただいた場合にGoogleアナリティクスで公開ページの閲覧と連絡ボタンの操作を計測します。氏名・連絡先・フォームやLINEの本文は解析に送信しません。広告用途には使いません。選択は90日保存し、フッターから変更できます。</p><p><a href="/privacy">詳しく見る</a> · <a href="https://policies.google.com/privacy?hl=ja" target="_blank" rel="noopener noreferrer">Googleのプライバシーポリシー</a></p><div><button type="button" data-choice="deny">許可しない</button><button type="button" data-choice="allow">許可する</button></div>';
     banner.querySelector('[data-choice=deny]').addEventListener('click', () => choose(false));
     banner.querySelector('[data-choice=allow]').addEventListener('click', () => choose(true));
     document.body.appendChild(banner);
     document.addEventListener('click', event => {
       if (!permitted() || !loaded) return;
       const anchor = event.target instanceof Element ? event.target.closest('a[href]') : null;
-      const href = anchor ? anchor.getAttribute('href') : '';
+      const href = anchor ? (anchor.getAttribute('href') || '') : '';
       const method = href.startsWith('tel:') ? 'telephone' : href.startsWith('mailto:') ? 'email'
         : /^https:\/\/(line\.me|lin\.ee)\//.test(href) ? 'line' : '';
       if (method) window.gtag('event', method === 'telephone' ? 'click_to_call' : 'outbound_contact',
