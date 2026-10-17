@@ -104,7 +104,7 @@
     banner.className = 'analytics-consent';
     banner.setAttribute('aria-label', 'アクセス解析の設定');
     banner.hidden = choice() !== null;
-    banner.innerHTML = '<h2>アクセス解析について</h2><p>サイト改善のため、同意いただいた場合のみGoogleアナリティクスを使用します。許可しなくても閲覧できます。</p><p>選択は90日保存。フッターから変更できます。<a href="/privacy#analytics">詳しく見る</a></p><div><button type="button" data-choice="deny">許可しない</button><button type="button" data-choice="allow">許可する</button></div>';
+    banner.innerHTML = '<h2>アクセス解析について</h2><p>サイト改善のため、同意いただいた場合のみGoogleアナリティクスを使用します。許可しなくても閲覧できます。</p><p>選択は90日保存。フッターから変更できます。<a href="/privacy.html#analytics">詳しく見る</a></p><div><button type="button" data-choice="deny">許可しない</button><button type="button" data-choice="allow">許可する</button></div>';
     banner.querySelector('[data-choice=deny]').addEventListener('click', () => choose(false));
     banner.querySelector('[data-choice=allow]').addEventListener('click', () => choose(true));
     document.body.appendChild(banner);
